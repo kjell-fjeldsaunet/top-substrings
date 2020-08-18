@@ -3,7 +3,16 @@ Substrings
 
 A function that takes a string and an array of strings. It checks if the string includes any of the strings in the array. It returns a hash with the words from the array as keys and number of occurences as the value. If the substring is not included in the string, there will be no key in the hash for that substring.
 
-I assume correct input, and chose not the check the input values.
+Example:
+
+```ruby
+  > dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+  => ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+  > substrings("below", dictionary)
+  => { "below" => 1, "low" => 1 }
+```
+
+I assume correct input, and chose not to the check the input values.
 
 ### Pseudocode used as starting point
 ```
@@ -21,7 +30,7 @@ loop through word array
 return result hash
 ```
 
-I chose not to use the `#scan` method in order to count occurences. This is because the `#scan` will not count overlayed duplicates.
+I chose not to use the `#scan` method to count occurences. This is because the `#scan` method will not count overlayed duplicates.
 For example:
 
 ```ruby
